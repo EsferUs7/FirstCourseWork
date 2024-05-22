@@ -61,8 +61,9 @@
             // 
             // ComboBoxMethods
             // 
+            ComboBoxMethods.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBoxMethods.FormattingEnabled = true;
-            ComboBoxMethods.Items.AddRange(new object[] { "Метод Крамера", "Метод Гауса з одиничною діагоналлю", "Метод Гауса з вибором головного елемента" });
+            ComboBoxMethods.Items.AddRange(new object[] { "Метод Крамера", "Метод Гауса з одиничною діагоналлю", "Метод Гауса з вибором головного елементу" });
             ComboBoxMethods.Location = new Point(380, 422);
             ComboBoxMethods.Name = "ComboBoxMethods";
             ComboBoxMethods.Size = new Size(417, 28);

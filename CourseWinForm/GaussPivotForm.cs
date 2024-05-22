@@ -6,7 +6,7 @@ namespace CourseWinForm
     {
         public override string GetMethodName()
         {
-            return "Метод_Гауса_з_вибором_головного_елемента";
+            return "Метод_Гауса_з_вибором_головного_елементу";
         }
 
         public override double[] GetResult(IStepsNotifiable? notifier = null)

@@ -114,7 +114,7 @@ namespace CourseWinForm
             }
             if (!allValuesIsCorrect)
             {
-                MessageBox.Show("Дані введено некоректно!");
+                MessageBox.Show("Дані введено некоректно");
                 return;
             }
 

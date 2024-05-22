@@ -56,7 +56,7 @@
             ClientSize = new Size(1132, 362);
             Controls.Add(ChartGraphic);
             Name = "GraphicForm";
-            Text = "GraphicForm";
+            Text = "Графічний_розв'язок";
             ((System.ComponentModel.ISupportInitialize)ChartGraphic).EndInit();
             ResumeLayout(false);
         }
