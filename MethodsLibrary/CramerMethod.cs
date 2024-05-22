@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MethodsLibrary
+﻿namespace MethodsLibrary
 {
     public static class CramerMethod
     {

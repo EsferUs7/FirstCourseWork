@@ -1,9 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.Design;
-using System.Linq;
-
-namespace MethodsLibrary
+﻿namespace MethodsLibrary
 {
     public static class GaussPivotMethod
     {

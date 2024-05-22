@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Runtime.InteropServices;
-
-namespace MethodsLibrary
+﻿namespace MethodsLibrary
 {
     public static class GaussDiagonalMethod
     {
