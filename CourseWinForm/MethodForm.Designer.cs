@@ -59,7 +59,7 @@
             ButtonGetFile.Name = "ButtonGetFile";
             ButtonGetFile.Size = new Size(139, 49);
             ButtonGetFile.TabIndex = 2;
-            ButtonGetFile.Text = "Завантажити\r\nфайл";
+            ButtonGetFile.Text = "Завантажити\r\nрозв'язки";
             ButtonGetFile.UseVisualStyleBackColor = true;
             ButtonGetFile.Click += ButtonGetFile_Click;
             // 

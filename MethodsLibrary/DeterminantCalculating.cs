@@ -7,6 +7,7 @@
             int n = matrix.GetLength(0);
             if (n == 1)
             {
+                iterations++;
                 return matrix[0, 0];
             }
             double determinant = 0;

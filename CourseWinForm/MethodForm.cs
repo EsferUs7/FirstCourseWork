@@ -20,7 +20,6 @@ namespace CourseWinForm
             methodIterations = 0;
             this.Text = GetMethodName();
             augmentedMatrix = MatrixOfArgs;
-            GetAnswerWithSteps();
             if (MatrixOfArgs.GetLength(0) == 2)
             {
                 int columnCount = 3;
@@ -32,6 +31,7 @@ namespace CourseWinForm
                     secondLineEquation[i] = MatrixOfArgs[1, i];
                 }
             }
+            GetAnswerWithSteps();
             if (MatrixOfArgs.GetLength(0) == 2)
             {
                 AddGraphicButton();
@@ -39,7 +39,6 @@ namespace CourseWinForm
             AddIterationsLabel();
             this.Load += MethodForm_Load;
         }
-
 
         private void MethodForm_Load(object sender, EventArgs e)
         {
@@ -63,7 +62,7 @@ namespace CourseWinForm
         {
             for (int i = 0; i < this.Result.Length; i++)
             {
-                if (Double.IsNaN(this.Result[i]) || Double.IsInfinity(this.Result[i]))
+                if (double.IsNaN(this.Result[i]) || double.IsInfinity(this.Result[i]))
                 {
                     return true;
                 }
@@ -145,13 +144,13 @@ namespace CourseWinForm
                 Location = new Point(12, 250),
                 Size = new Size(139, 60)  
             };
-            this.Controls.Add(ButtonToGetGraphic);
+            Controls.Add(ButtonToGetGraphic);
             ButtonToGetGraphic.Click += ButtonToGetGraphic_Click;
         }
 
         private void ButtonToGetGraphic_Click(object sender, EventArgs e)
         {
-            new GraphicForm(firstLineEquation, secondLineEquation, Result).Show();
+            new GraphicForm(firstLineEquation, secondLineEquation, Result).ShowDialog();
         }
 
         private void AddIterationsLabel()
@@ -162,7 +161,7 @@ namespace CourseWinForm
                 Location = new Point(200, 393),
                 Size = new Size(250, 60)
             };
-            this.Controls.Add(LabelToGetOperation);
+            Controls.Add(LabelToGetOperation);
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

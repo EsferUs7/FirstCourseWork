@@ -14,12 +14,13 @@
                 {
                     if (Math.Abs(augmentedMatrix[i, k]) > Math.Abs(augmentedMatrix[maxInCol, k]))
                     {
+                        iterations++;
                         maxInCol = i;
                     }
                 }
                 if (maxInCol != k)
                 {
-                    SwapRows(augmentedMatrix, k, maxInCol);
+                    SwapRows(augmentedMatrix, k, maxInCol, ref iterations);
                     notifier?.SetNotify($"Перестановка рядків {k + 1} та {maxInCol + 1}");
                 }
 
@@ -31,6 +32,7 @@
                 }
                 for (int j = k; j < m; j++)
                 {
+                    iterations++;
                     augmentedMatrix[k, j] /= diagonalElement;
                 }
                 notifier?.SetNotify($"Нормалізація діагонального елемента {k + 1}");
@@ -53,6 +55,7 @@
                 double sum = 0;
                 for (int j = i + 1; j < n; j++)
                 {
+                    iterations++;
                     sum += augmentedMatrix[i, j] * solution[j];
                 }
                 solution[i] = augmentedMatrix[i, m - 1] - sum;
@@ -61,11 +64,12 @@
             return solution;
         }
 
-        private static void SwapRows(double[,] matrix, int firstRow, int secondRow)
+        private static void SwapRows(double[,] matrix, int firstRow, int secondRow, ref int iterations)
         {
-            int n = matrix.GetLength(1);
-            for (int j = 0; j < n; j++)
+            int m = matrix.GetLength(1);
+            for (int j = 0; j < m; j++)
             {
+                iterations++;
                 double temp = matrix[firstRow, j];
                 matrix[firstRow, j] = matrix[secondRow, j];
                 matrix[secondRow, j] = temp;

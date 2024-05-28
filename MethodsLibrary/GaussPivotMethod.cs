@@ -9,18 +9,19 @@
 
             for (int k = 0; k < n; k++)
             {
-                int maxRow = k;
+                int maxInCol = k;
                 for (int i = k + 1; i < n; i++)
                 {
-                    if (Math.Abs(augmentedMatrix[i, k]) > Math.Abs(augmentedMatrix[maxRow, k]))
+                    iterations++;
+                    if (Math.Abs(augmentedMatrix[i, k]) > Math.Abs(augmentedMatrix[maxInCol, k]))
                     {
-                        maxRow = i;
+                        maxInCol = i;
                     }
                 }
-                if (maxRow != k)
+                if (maxInCol != k)
                 {
-                    SwapRows(augmentedMatrix, k, maxRow);
-                    notifier?.SetNotify($"Перестановка рядків {k + 1} та {maxRow + 1}");
+                    SwapRows(augmentedMatrix, k, maxInCol, ref iterations);
+                    notifier?.SetNotify($"Перестановка рядків {k + 1} та {maxInCol + 1}");
                 }
 
                 if (augmentedMatrix[k, k] == 0)
@@ -46,6 +47,7 @@
                 double sum = 0;
                 for (int j = i + 1; j < n; j++)
                 {
+                    iterations++;
                     sum += augmentedMatrix[i, j] * solution[j];
                 }
                 solution[i] = (augmentedMatrix[i, m - 1] - sum) / augmentedMatrix[i, i];
@@ -54,11 +56,12 @@
             return solution;
         }
 
-        private static void SwapRows(double[,] matrix, int firstRow, int secondRow)
+        private static void SwapRows(double[,] matrix, int firstRow, int secondRow, ref int iterations)
         {
-            int n = matrix.GetLength(1);
-            for (int j = 0; j < n; j++)
+            int m = matrix.GetLength(1);
+            for (int j = 0; j < m; j++)
             {
+                iterations++;
                 double temp = matrix[firstRow, j];
                 matrix[firstRow, j] = matrix[secondRow, j];
                 matrix[secondRow, j] = temp;

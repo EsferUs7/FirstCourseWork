@@ -2,8 +2,8 @@
 {
     public static class MatrixValuesManager
     {
-        private const double _minValue = 1e-10;
-        private const double _maxValue = 1e10;
+        private const double _minValue = 1e-6;
+        private const double _maxValue = 1e5;
 
         public static double[,] DeepCopy(double[,] matrixToCopy)
         {
@@ -40,7 +40,7 @@
             {
                 throw new ValueTooSmallException();
             }
-            if (Double.IsNaN(absResult) || Double.IsInfinity(absResult))
+            if (double.IsNaN(absResult) || double.IsInfinity(absResult))
             {
                 throw new FormatException();
             }
@@ -55,6 +55,18 @@
                 }
             }
             return result;
+        }
+
+        public static string GetToPrintNumber(double number)
+        {
+            if (Math.Abs(number) < _maxValue)
+            {
+                return number.ToString("G6");
+            }
+            else
+            {
+                return number.ToString("E3");
+            }
         }
     }
 }

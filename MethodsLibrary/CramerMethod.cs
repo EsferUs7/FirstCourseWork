@@ -14,7 +14,7 @@
                 }
             }
 
-            double mainDet = DeterminantCalculating.CalculateDeterminant(coefficientMatrix, ref iterations);
+            double mainDet = DeterminantCalculating.CalculateDeterminant(coefficientMatrix, ref iterations); 
             if (mainDet == 0)
             {
                 notifier.SetNotify("Метод є розбіжним, оскільки визначник основної матриці 0");
