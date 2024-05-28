@@ -123,7 +123,6 @@
             // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1540, 488);
             Controls.Add(ClearButton);
