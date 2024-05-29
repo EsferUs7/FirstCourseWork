@@ -7,7 +7,7 @@ namespace CourseWinForm
     {
         private double _xMin;
         private double _xMax;
-        private double _range;
+        private readonly double _range;
         private readonly double[] _firstEquation;
         private readonly double[] _secondEquation;
         private readonly double[] _result;

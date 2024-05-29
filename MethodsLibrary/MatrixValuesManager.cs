@@ -4,6 +4,7 @@
     {
         private const double _minValue = 1e-6;
         private const double _maxValue = 1e5;
+        private const int _maxDigitsAfterDot = 9;
 
         public static double[,] DeepCopy(double[,] matrixToCopy)
         {
@@ -29,6 +30,15 @@
             if (!double.TryParse(receivedString, out double result))
             {
                 throw new FormatException();
+            }
+            int flagIndex = receivedString.IndexOf(',');
+            if (flagIndex != -1)
+            {
+                int digitsAfterDot = receivedString.Length - 1 - flagIndex;
+                if (digitsAfterDot > _maxDigitsAfterDot)
+                {
+                    throw new Exception();
+                }
             }
 
             double absResult = Math.Abs(result);

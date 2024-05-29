@@ -105,7 +105,8 @@ namespace CourseWinForm
                         else if (ex is ValueTooSmallException) massage = "Абсолютне значення замале. " +
                             "Введіть значення з вказаної множини";
                         else massage = "Введено некоректне значення. " +
-                            "Введіть дійсне значення з вказаної множини у форматі '12,13'";
+                            "Введіть дійсне значення з вказаної множини у форматі '12,13'. " +
+                            "Кількість знаків після коми має бути не більшою за 9";
                         _matrixToolTips[row, col].SetToolTip(_matrixTextBoxes[row, col], massage);
                         _matrixTextBoxes[row, col].BackColor = Color.Red;
                         allValuesIsCorrect = false;

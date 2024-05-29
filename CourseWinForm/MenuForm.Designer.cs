@@ -73,7 +73,7 @@
             // 
             ComboBoxMatrixLength.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBoxMatrixLength.FormattingEnabled = true;
-            ComboBoxMatrixLength.Location = new Point(12, 327);
+            ComboBoxMatrixLength.Location = new Point(12, 352);
             ComboBoxMatrixLength.Name = "ComboBoxMatrixLength";
             ComboBoxMatrixLength.Size = new Size(151, 28);
             ComboBoxMatrixLength.TabIndex = 9;
@@ -81,7 +81,7 @@
             // labelForDimensions
             // 
             labelForDimensions.AutoSize = true;
-            labelForDimensions.Location = new Point(12, 304);
+            labelForDimensions.Location = new Point(12, 329);
             labelForDimensions.Name = "labelForDimensions";
             labelForDimensions.Size = new Size(135, 20);
             labelForDimensions.TabIndex = 10;
@@ -107,7 +107,7 @@
             ShowInfoLabel.ImageAlign = ContentAlignment.MiddleLeft;
             ShowInfoLabel.Location = new Point(12, 9);
             ShowInfoLabel.Name = "ShowInfoLabel";
-            ShowInfoLabel.Size = new Size(246, 262);
+            ShowInfoLabel.Size = new Size(246, 302);
             ShowInfoLabel.TabIndex = 12;
             ShowInfoLabel.Text = resources.GetString("ShowInfoLabel.Text");
             // 
@@ -123,6 +123,7 @@
             // 
             // MenuForm
             // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1540, 488);
             Controls.Add(ClearButton);
