@@ -115,7 +115,8 @@ namespace CourseWinForm
             }
             if (!allValuesIsCorrect)
             {
-                MessageBox.Show("Дані введено некоректно");
+                MessageBox.Show("Дані введено некоректно.\n" +
+                    "Наведіться на комірку для детальнішої інформації.");
                 return;
             }
 
@@ -126,17 +127,17 @@ namespace CourseWinForm
                 int selectedIndex = ComboBoxMethods.SelectedIndex;
                 switch (selectedIndex)
                 {
-                    case 0: // Метод Крамера
+                    case 0:
                         new CramerMethodForm(MatrixOfCoefficients).ShowDialog();
                         break;
-                    case 1: // Метод Гауса з одиничною діагоналлю
+                    case 1:
                         new GaussDiagonalForm(MatrixOfCoefficients).ShowDialog();
                         break;
-                    case 2: // Метод Гауса з вибором головного елементу
+                    case 2:
                         new GaussPivotForm(MatrixOfCoefficients).ShowDialog();
                         break;
                     default:
-                        MessageBox.Show("Метод не обрано. Будь ласка, оберіть метод розв'язання СЛАР");
+                        MessageBox.Show("Метод не обрано. Будь ласка, оберіть метод розв'язання СЛАР.");
                         break;
                 }
             }
@@ -146,7 +147,7 @@ namespace CourseWinForm
             }
             else
             {
-                MessageBox.Show("Система несумісна");
+                MessageBox.Show("Система несумісна.");
             }
         }
 

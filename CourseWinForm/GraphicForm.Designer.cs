@@ -39,9 +39,11 @@
             chartArea1.CursorX.AutoScroll = false;
             chartArea1.CursorX.IsUserEnabled = true;
             chartArea1.CursorX.IsUserSelectionEnabled = true;
+            chartArea1.CursorX.LineColor = Color.Orange;
             chartArea1.CursorY.AutoScroll = false;
             chartArea1.CursorY.IsUserEnabled = true;
             chartArea1.CursorY.IsUserSelectionEnabled = true;
+            chartArea1.CursorY.LineColor = Color.Orange;
             chartArea1.Name = "ChartArea1";
             ChartGraphic.ChartAreas.Add(chartArea1);
             legend1.MaximumAutoSize = 100F;
@@ -57,6 +59,7 @@
             // 
             // GraphicForm
             // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1132, 362);
             Controls.Add(ChartGraphic);
