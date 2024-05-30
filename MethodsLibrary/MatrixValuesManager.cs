@@ -40,6 +40,10 @@
                     throw new Exception();
                 }
             }
+            if (receivedString.Split(" ").Length > 1)
+            {
+                throw new FormatException();
+            }
 
             double absResult = Math.Abs(result);
             if (absResult > _maxValue)
